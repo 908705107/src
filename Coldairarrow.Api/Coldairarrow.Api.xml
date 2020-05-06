@@ -1,0 +1,811 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Coldairarrow.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Coldairarrow.Api.BaseActionFilter.JsonContent(System.String)">
+            <summary>
+            返回JSON
+            </summary>
+            <param name="json">json字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseActionFilter.Success">
+            <summary>
+            返回成功
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseActionFilter.Success(System.String)">
+            <summary>
+            返回成功
+            </summary>
+            <param name="msg">消息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseActionFilter.Success``1(``0)">
+            <summary>
+            返回成功
+            </summary>
+            <param name="data">返回的数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseActionFilter.Error">
+            <summary>
+            返回错误
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseActionFilter.Error(System.String)">
+            <summary>
+            返回错误
+            </summary>
+            <param name="msg">错误提示</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseActionFilter.Error(System.String,System.Int32)">
+            <summary>
+            返回错误
+            </summary>
+            <param name="msg">错误提示</param>
+            <param name="errorCode">错误代码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Coldairarrow.Api.JsonParamterAttribute">
+            <summary>
+            Json参数支持
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.JsonParamterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action执行之前执行
+            </summary>
+            <param name="context">过滤器上下文</param>
+        </member>
+        <member name="M:Coldairarrow.Api.JsonParamterAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Action执行完毕之后执行
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Coldairarrow.Api.NoJsonParamterAttribute">
+            <summary>
+            忽略Json参数支持
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.NoJsonParamterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action执行之前执行
+            </summary>
+            <param name="context">过滤器上下文</param>
+        </member>
+        <member name="M:Coldairarrow.Api.NoJsonParamterAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Action执行完毕之后执行
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Coldairarrow.Api.CheckJWTAttribute">
+            <summary>
+            JWT校验
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.CheckJWTAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action执行之前执行
+            </summary>
+            <param name="context">过滤器上下文</param>
+        </member>
+        <member name="M:Coldairarrow.Api.CheckJWTAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Action执行完毕之后执行
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Coldairarrow.Api.NoCheckJWTAttribute">
+            <summary>
+            忽略JWT校验
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.NoCheckJWTAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action执行之前执行
+            </summary>
+            <param name="context">过滤器上下文</param>
+        </member>
+        <member name="M:Coldairarrow.Api.NoCheckJWTAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Action执行完毕之后执行
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Coldairarrow.Api.CheckParamNotEmptyAttribute">
+            <summary>
+            参数非空校验
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.CheckParamNotEmptyAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action执行之前执行
+            </summary>
+            <param name="filterContext">过滤器上下文</param>
+        </member>
+        <member name="M:Coldairarrow.Api.CheckParamNotEmptyAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Action执行完毕之后执行
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="T:Coldairarrow.Api.CheckSignAttribute">
+            <summary>
+            校验签名、十分严格
+            防抵赖、防伪造、防重复调用
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.CheckSignAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action执行之前执行
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="T:Coldairarrow.Api.IgnoreSignAttribute">
+            <summary>
+            忽略接口签名校验
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Api.ApiPermissionAttribute">
+            <summary>
+            接口权限校验
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.ApiPermissionAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action执行之前执行
+            </summary>
+            <param name="context">过滤器上下文</param>
+        </member>
+        <member name="T:Coldairarrow.Api.NoApiPermissionAttribute">
+            <summary>
+            忽略接口权限校验
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.NoApiPermissionAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action执行之前执行
+            </summary>
+            <param name="context">过滤器上下文</param>
+        </member>
+        <member name="M:Coldairarrow.Api.NoApiPermissionAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Action执行完毕之后执行
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Coldairarrow.Api.ApiLogAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action执行之前执行
+            </summary>
+            <param name="filterContext">过滤器上下文</param>
+        </member>
+        <member name="M:Coldairarrow.Api.ApiLogAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Action执行完毕之后执行
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="T:Coldairarrow.Api.FormatResponseAttribute">
+            <summary>
+            若Action返回对象为自定义对象,则将其转为JSON
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.FormatResponseAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action执行之前执行
+            </summary>
+            <param name="context">过滤器上下文</param>
+        </member>
+        <member name="M:Coldairarrow.Api.FormatResponseAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Action执行完毕之后执行
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Coldairarrow.Api.NoFormatResponseAttribute">
+            <summary>
+            返回结果不进行格式化
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.NoFormatResponseAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action执行之前执行
+            </summary>
+            <param name="context">过滤器上下文</param>
+        </member>
+        <member name="M:Coldairarrow.Api.NoFormatResponseAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Action执行完毕之后执行
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Coldairarrow.Api.CorsMiddleware">
+            <summary>
+            跨域中间件
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.CorsMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            管道执行到该中间件时候下一个中间件的RequestDelegate请求委托，如果有其它参数，也同样通过注入的方式获得
+            </summary>
+            <param name="next"></param>
+        </member>
+        <member name="M:Coldairarrow.Api.CorsMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            自定义中间件要执行的逻辑
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.ArticleManage.Article_ArticleCateGoryController.GetDataList(Coldairarrow.Util.Pagination,System.String,System.String)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="pagination">分页参数</param>
+            <param name="condition">查询字段</param>
+            <param name="keyword">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.ArticleManage.Article_ArticleCateGoryController.GetTheData(System.String)">
+            <summary>
+            获取详情
+            </summary>
+            <param name="id">Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.ArticleManage.Article_ArticleCateGoryController.SaveData(Coldairarrow.Entity.ArticleManage.Article_ArticleCateGory)">
+            <summary>
+            保存
+            </summary>
+            <param name="data">保存的数据</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.ArticleManage.Article_ArticleCateGoryController.DeleteData(System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="ids">id数组,JSON数组</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.ArticleManage.Article_InfoController.GetDataList(Coldairarrow.Util.Pagination,System.String,System.String,System.Boolean,System.Int32,System.Boolean)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="pagination">分页参数</param>
+            <param name="condition">查询字段</param>
+            <param name="keyword">关键字</param>
+            <param name="isall">是否要分页</param>
+            <param name="isdelete">是否删除</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.ArticleManage.Article_InfoController.GetTheData(System.String)">
+            <summary>
+            获取详情
+            </summary>
+            <param name="id">Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.ArticleManage.Article_InfoController.GetThePicData(System.String)">
+            <summary>
+            获取图片数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.ArticleManage.Article_InfoController.SaveData(Coldairarrow.Entity.ArticleManage.Article_Info)">
+            <summary>
+            保存
+            </summary>
+            <param name="data">保存的数据</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.ArticleManage.Article_InfoController.AddData(Coldairarrow.Entity.ArticleManage.Article_Info,System.Collections.Generic.List{Coldairarrow.Util.PicDTO},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            添加文章（包括图片）
+            </summary>
+            <param name="data"></param>
+            <param name="bannerpic"></param>
+            <param name="CategoryList"></param>
+            <param name="TagList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.ArticleManage.Article_InfoController.DeleteData(System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="ids">id数组,JSON数组</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.ArticleManage.Article_TagArticleController.GetDataList(Coldairarrow.Util.Pagination,System.String,System.String)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="pagination">分页参数</param>
+            <param name="condition">查询字段</param>
+            <param name="keyword">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.ArticleManage.Article_TagArticleController.GetTheData(System.String)">
+            <summary>
+            获取详情
+            </summary>
+            <param name="id">Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.ArticleManage.Article_TagArticleController.SaveData(Coldairarrow.Entity.ArticleManage.Article_TagArticle)">
+            <summary>
+            保存
+            </summary>
+            <param name="data">保存的数据</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.ArticleManage.Article_TagArticleController.DeleteData(System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="ids">id数组,JSON数组</param>
+        </member>
+        <member name="T:Coldairarrow.Api.Controllers.Base_Manage.Base_ActionController">
+            <summary>
+            系统权限
+            </summary>
+            <seealso cref="T:Coldairarrow.Api.BaseApiController" />
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_ActionController.GetTheData(System.String)">
+            <summary>
+            获取详情
+            </summary>
+            <param name="id">id主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_ActionController.GetPermissionList(System.String)">
+            <summary>
+            获取数据列表
+            </summary>
+            <param name="parentId">父级Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_ActionController.GetMenuTreeList(System.String)">
+            <summary>
+            获取菜单树列表
+            </summary>
+            <param name="keyword">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_ActionController.GetActionTreeList(System.String)">
+            <summary>
+            获取权限树列表
+            </summary>
+            <param name="keyword">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_ActionController.DeleteData(System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="ids">id数组,JSON数组</param>
+        </member>
+        <member name="T:Coldairarrow.Api.Controllers.Base_Manage.Base_AppSecretController">
+            <summary>
+            应用密钥
+            </summary>
+            <seealso cref="T:Coldairarrow.Api.BaseApiController" />
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_AppSecretController.GetDataList(Coldairarrow.Util.Pagination,System.String)">
+            <summary>
+            获取数据列表
+            </summary>
+            <param name="pagination">分页参数</param>
+            <param name="keyword">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_AppSecretController.GetTheData(System.String)">
+            <summary>
+            获取详情
+            </summary>
+            <param name="id">id主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_AppSecretController.SaveData(Coldairarrow.Entity.Base_Manage.Base_AppSecret)">
+            <summary>
+            保存
+            </summary>
+            <param name="theData">保存的数据</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_AppSecretController.DeleteData(System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="ids">id数组,JSON数组</param>
+        </member>
+        <member name="T:Coldairarrow.Api.Controllers.Base_Manage.Base_DbLinkController">
+            <summary>
+            应用密钥
+            </summary>
+            <seealso cref="T:Coldairarrow.Api.BaseApiController" />
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_DbLinkController.SaveData(Coldairarrow.Entity.Base_Manage.Base_DbLink)">
+            <summary>
+            保存
+            </summary>
+            <param name="theData">保存的数据</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_DbLinkController.DeleteData(System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="ids">id数组,JSON数组</param>
+        </member>
+        <member name="T:Coldairarrow.Api.Controllers.Base_Manage.Base_RoleController">
+            <summary>
+            应用密钥
+            </summary>
+            <seealso cref="T:Coldairarrow.Api.BaseApiController" />
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_RoleController.GetDataList(Coldairarrow.Util.Pagination,System.String)">
+            <summary>
+            获取数据列表
+            </summary>
+            <param name="pagination">分页参数</param>
+            <param name="roleName">角色名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_RoleController.GetTheData(System.String)">
+            <summary>
+            获取详情
+            </summary>
+            <param name="id">id主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_RoleController.SaveData(Coldairarrow.Entity.Base_Manage.Base_Role,System.String)">
+            <summary>
+            保存
+            </summary>
+            <param name="theData">保存的数据</param>
+            <param name="actionsJson">权限值JSON</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_RoleController.DeleteData(System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="ids">id数组,JSON数组</param>
+        </member>
+        <member name="T:Coldairarrow.Api.Controllers.Base_Manage.Base_UserController">
+            <seealso cref="T:Coldairarrow.Api.BaseApiController" />
+        </member>
+        <member name="T:Coldairarrow.Api.Controllers.Base_Manage.HomeController">
+            <summary>
+            首页控制器
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.HomeController.SubmitLogin(System.String,System.String)">
+            <summary>
+            用户登录(获取token)
+            </summary>
+            <param name="userName">账号</param>
+            <param name="password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="P:Coldairarrow.Api.Controllers.Base_Manage.PicDTO.name">
+            <summary>
+            图片名称
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Controllers.Base_Manage.PicDTO.size">
+            <summary>
+            大小
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Controllers.Base_Manage.PicDTO.type">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Controllers.Base_Manage.PicDTO.thumbUrl">
+            <summary>
+            绝对路径
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Controllers.Base_Manage.PicDTO.path">
+            <summary>
+            相对路径
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Comment.Comment_ArticleUserController.GetDataList(Coldairarrow.Util.Pagination,System.String,System.String)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="pagination">分页参数</param>
+            <param name="condition">查询字段</param>
+            <param name="keyword">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Comment.Comment_ArticleUserController.GetTheData(System.String)">
+            <summary>
+            获取详情
+            </summary>
+            <param name="id">Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Comment.Comment_ArticleUserController.SaveData(Coldairarrow.Entity.Comment.Comment_ArticleUser)">
+            <summary>
+            保存
+            </summary>
+            <param name="data">保存的数据</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Comment.Comment_ArticleUserController.DeleteData(System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="ids">id数组,JSON数组</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Comment.Comment_BoardController.GetTreeDataList(Coldairarrow.Util.Pagination,System.String,System.String)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="pagination">分页参数</param>
+            <param name="condition">查询字段</param>
+            <param name="keyword">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Comment.Comment_BoardController.GetTheData(System.String)">
+            <summary>
+            获取详情
+            </summary>
+            <param name="id">Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Comment.Comment_BoardController.SaveData(Coldairarrow.Entity.Comment.Comment_Board)">
+            <summary>
+            保存
+            </summary>
+            <param name="data">保存的数据</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Comment.Comment_BoardController.DeleteData(System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="ids">id数组,JSON数组</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.DataManage.Data_CategoryController.GetDataList(Coldairarrow.Util.Pagination,System.String,System.String)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="pagination">分页参数</param>
+            <param name="condition">查询字段</param>
+            <param name="keyword">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.DataManage.Data_CategoryController.GetDataTreeListAsync(System.String,System.String,System.Boolean)">
+            <summary>
+            查询分类的树结构
+            </summary>
+            <param name="condition"></param>
+            <param name="keyword"></param>
+            <param name="isall">是否查询全部树结构</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.DataManage.Data_CategoryController.GetTheData(System.String)">
+            <summary>
+            获取详情
+            </summary>
+            <param name="id">Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.DataManage.Data_CategoryController.SaveData(Coldairarrow.Entity.DataManage.Data_Category)">
+            <summary>
+            保存
+            </summary>
+            <param name="data">保存的数据</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.DataManage.Data_CategoryController.DeleteData(System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="ids">id数组,JSON数组</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.DataManage.Data_FileController.GetDataList(Coldairarrow.Util.Pagination,System.String,System.String)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="pagination">分页参数</param>
+            <param name="condition">查询字段</param>
+            <param name="keyword">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.DataManage.Data_FileController.GetTheData(System.String)">
+            <summary>
+            获取详情
+            </summary>
+            <param name="id">Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.DataManage.Data_FileController.SaveData(Coldairarrow.Entity.DataManage.Data_File)">
+            <summary>
+            保存
+            </summary>
+            <param name="data">保存的数据</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.DataManage.Data_FileController.DeleteData(System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="ids">id数组,JSON数组</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.DataManage.Data_TagController.GetDataList(Coldairarrow.Util.Pagination,System.String,System.String)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="pagination">分页参数</param>
+            <param name="condition">查询字段</param>
+            <param name="keyword">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.DataManage.Data_TagController.GetTheData(System.String)">
+            <summary>
+            获取详情
+            </summary>
+            <param name="id">Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.DataManage.Data_TagController.SaveData(Coldairarrow.Entity.DataManage.Data_Tag)">
+            <summary>
+            保存
+            </summary>
+            <param name="data">保存的数据</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.DataManage.Data_TagController.DeleteData(System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="ids">id数组,JSON数组</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.DataManage.Data_UserController.GetDataList(Coldairarrow.Util.Pagination,System.String,System.String)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="pagination">分页参数</param>
+            <param name="condition">查询字段</param>
+            <param name="keyword">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.DataManage.Data_UserController.GetTheData(System.String)">
+            <summary>
+            获取详情
+            </summary>
+            <param name="id">Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.DataManage.Data_UserController.SaveData(Coldairarrow.Entity.DataManage.Data_User)">
+            <summary>
+            保存
+            </summary>
+            <param name="data">保存的数据</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.DataManage.Data_UserController.DeleteData(System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="ids">id数组,JSON数组</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.TestController.PressTest1">
+            <summary>
+            压力测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.TestController.PressTest2">
+            <summary>
+            压力测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.TestManage.Base_BuildTestController.GetDataList(Coldairarrow.Util.Pagination,System.String,System.String)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="pagination">分页参数</param>
+            <param name="condition">查询字段</param>
+            <param name="keyword">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.TestManage.Base_BuildTestController.GetTheData(System.String)">
+            <summary>
+            获取详情
+            </summary>
+            <param name="id">Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.TestManage.Base_BuildTestController.SaveData(Coldairarrow.Entity.TestManage.Base_BuildTest)">
+            <summary>
+            保存
+            </summary>
+            <param name="data">保存的数据</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.TestManage.Base_BuildTestController.DeleteData(System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="ids">id数组,JSON数组</param>
+        </member>
+        <member name="T:Coldairarrow.Api.BaseApiController">
+            <summary>
+            Mvc对外接口基控制器
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Api.BaseController">
+            <summary>
+            基控制器
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseController.JsonContent(System.String)">
+            <summary>
+            返回JSON
+            </summary>
+            <param name="jsonStr">json字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseController.HtmlContent(System.String)">
+            <summary>
+            返回html
+            </summary>
+            <param name="body">html内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseController.Success">
+            <summary>
+            返回成功
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseController.Success``1(``0)">
+            <summary>
+            返回成功
+            </summary>
+            <param name="data">返回数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseController.Success``1(``0,System.String)">
+            <summary>
+            返回成功
+            </summary>
+            <param name="data">返回数据</param>
+            <param name="msg">返回消息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseController.Error">
+            <summary>
+            返回错误
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseController.Error(System.String)">
+            <summary>
+            返回错误
+            </summary>
+            <param name="msg">错误提示</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseController.DataTable``1(System.Collections.Generic.List{``0})">
+            <summary>
+            返回表格数据
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="list">数据列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseController.DataTable``1(System.Collections.Generic.List{``0},Coldairarrow.Util.Pagination)">
+            <summary>
+            返回表格数据
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="list">数据列表</param>
+            <param name="pagination">分页参数</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

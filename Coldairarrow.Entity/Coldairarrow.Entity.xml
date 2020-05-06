@@ -1,0 +1,988 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Coldairarrow.Entity</name>
+    </assembly>
+    <members>
+        <member name="T:Coldairarrow.Entity.ArticleManage.Article_ArticleCateGory">
+            <summary>
+            文章分类表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_ArticleCateGory.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_ArticleCateGory.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_ArticleCateGory.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_ArticleCateGory.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_ArticleCateGory.ArtileID">
+            <summary>
+            文章ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_ArticleCateGory.CategoryID">
+            <summary>
+            分类ID
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.ArticleManage.Article_Info">
+            <summary>
+            文章主表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_Info.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_Info.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_Info.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_Info.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_Info.Tittle">
+            <summary>
+            文章标题
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_Info.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_Info.Content">
+            <summary>
+            文章内容
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_Info.Supports">
+            <summary>
+            点赞数量
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_Info.BannerPic">
+            <summary>
+            Banner图
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_Info.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_Info.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_Info.ViewCounts">
+            <summary>
+            浏览总量
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_Info.ReleaseTime">
+            <summary>
+            发布日期
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_Info.LastModifiedTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_Info.IsToporQuality">
+            <summary>
+            是否置顶或精品 1置顶，2精品
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_Info.IsComment">
+            <summary>
+            是否开启评论 默认是
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.ArticleManage.Article_TagArticle">
+            <summary>
+            文章标签表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_TagArticle.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_TagArticle.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_TagArticle.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_TagArticle.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_TagArticle.ArticleID">
+            <summary>
+            博文ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.ArticleManage.Article_TagArticle.TagID">
+            <summary>
+            标签ID
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.ArticleManage.EnumType">
+            <summary>
+            枚举类型
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.ArticleManage.EnumType.IsTopEnum">
+            <summary>
+            系统角色类型
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.ArticleManage.EnumType.IsRelease">
+            <summary>
+            是否发布，0未发布,1已发布
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Base_Manage.Base_Action">
+            <summary>
+            系统权限表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Action.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Action.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Action.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Action.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Action.ParentId">
+            <summary>
+            父级Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Action.Type">
+            <summary>
+            类型,菜单=0,页面=1,权限=2
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Action.Name">
+            <summary>
+            权限名/菜单名
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Action.Url">
+            <summary>
+            菜单地址
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Action.Value">
+            <summary>
+            权限值
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Action.NeedAction">
+            <summary>
+            是否需要权限(仅页面有效)
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Action.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Action.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Base_Manage.Base_AppSecret">
+            <summary>
+            应用密钥表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_AppSecret.Id">
+            <summary>
+            自然主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_AppSecret.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_AppSecret.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_AppSecret.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_AppSecret.AppId">
+            <summary>
+            应用Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_AppSecret.AppSecret">
+            <summary>
+            应用密钥
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_AppSecret.AppName">
+            <summary>
+            应用名
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Base_Manage.Base_DbLink">
+            <summary>
+            数据库连接表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_DbLink.Id">
+            <summary>
+            自然主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_DbLink.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_DbLink.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_DbLink.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_DbLink.LinkName">
+            <summary>
+            连接名
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_DbLink.ConnectionStr">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_DbLink.DbType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Base_Manage.Base_Department">
+            <summary>
+            部门表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Department.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Department.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Department.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Department.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Department.Name">
+            <summary>
+            部门名
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Department.ParentId">
+            <summary>
+            上级部门Id
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Base_Manage.Base_Log">
+            <summary>
+            系统日志表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Log.Id">
+            <summary>
+            自然主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Log.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Log.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Log.CreatorRealName">
+            <summary>
+            创建人姓名
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Log.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Log.Level">
+            <summary>
+            日志级别
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Log.LogType">
+            <summary>
+            日志类型
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Log.LogContent">
+            <summary>
+            日志内容
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Log.Data">
+            <summary>
+            数据备份（转为JSON字符串）
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Base_Manage.Base_Role">
+            <summary>
+            系统角色表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Role.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Role.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Role.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Role.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_Role.RoleName">
+            <summary>
+            角色名
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Base_Manage.Base_RoleAction">
+            <summary>
+            角色权限表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_RoleAction.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_RoleAction.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_RoleAction.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_RoleAction.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_RoleAction.RoleId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_RoleAction.ActionId">
+            <summary>
+            权限Id
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Base_Manage.Base_UnitTest">
+            <summary>
+            单元测试表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_UnitTest.Id">
+            <summary>
+            代理主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_UnitTest.UserId">
+            <summary>
+            UserId
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_UnitTest.UserName">
+            <summary>
+            UserName
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_UnitTest.Age">
+            <summary>
+            Age
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Base_Manage.Base_User">
+            <summary>
+            系统用户表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_User.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_User.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_User.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_User.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_User.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_User.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_User.RealName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_User.Sex">
+            <summary>
+            性别(1为男，0为女)
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_User.Birthday">
+            <summary>
+            出生日期
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_User.DepartmentId">
+            <summary>
+            所属部门Id
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Base_Manage.Base_UserRole">
+            <summary>
+            用户角色表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_UserRole.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_UserRole.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_UserRole.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_UserRole.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_UserRole.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Base_Manage.Base_UserRole.RoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Base_Manage.EnumType">
+            <summary>
+            枚举类型
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Base_Manage.EnumType.RoleTypeEnum">
+            <summary>
+            系统角色类型
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Base_Manage.EnumType.ActionTypeEnum">
+            <summary>
+            类型,菜单=0,页面=1,权限=2
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Comment.Comment_ArticleUser">
+            <summary>
+            文章用户评论表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_ArticleUser.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_ArticleUser.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_ArticleUser.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_ArticleUser.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_ArticleUser.CommentID">
+            <summary>
+            评论ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_ArticleUser.CommentPID">
+            <summary>
+            父评论ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_ArticleUser.CommentInfo">
+            <summary>
+            评论内容
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_ArticleUser.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_ArticleUser.ArticleID">
+            <summary>
+            文章ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_ArticleUser.Supports">
+            <summary>
+            点赞数
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.Comment.Comment_Board">
+            <summary>
+            留言板留言表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_Board.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_Board.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_Board.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_Board.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_Board.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_Board.CommentID">
+            <summary>
+            留言ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_Board.CommentPID">
+            <summary>
+            父留言ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_Board.CommentInfo">
+            <summary>
+            留言内容
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.Comment.Comment_Board.Supports">
+            <summary>
+            点赞数
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.DataManage.Data_Category">
+            <summary>
+            分类表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_Category.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_Category.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_Category.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_Category.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_Category.CategoryName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_Category.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_Category.Type">
+            <summary>
+            分类类型 
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_Category.Pid">
+            <summary>
+            父ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_Category.Remark">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.DataManage.Data_File">
+            <summary>
+            文件表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.Pid">
+            <summary>
+            父ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.Name">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.FileID">
+            <summary>
+            文件ID
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.CategoryID">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.IsFolder">
+            <summary>
+            0不是 1是文件夹
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.Size">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.UpdateTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.FileExtension">
+            <summary>
+            后缀
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.FilePath">
+            <summary>
+            相对路径
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.FileAlias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_File.ArticleID">
+            <summary>
+            文章ID
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.DataManage.Data_Tag">
+            <summary>
+            标签表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_Tag.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_Tag.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_Tag.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_Tag.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_Tag.TagName">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_Tag.TabAlias">
+            <summary>
+            标签别名
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_Tag.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.DataManage.Data_User">
+            <summary>
+            用户表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_User.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_User.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_User.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_User.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_User.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_User.sex">
+            <summary>
+            0男1女
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.DataManage.Data_User.UserType">
+            <summary>
+            用户类型  QQ用户，游客等
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Entity.TestManage.Base_BuildTest">
+            <summary>
+            生成测试表
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.TestManage.Base_BuildTest.Id">
+            <summary>
+            自然主键
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.TestManage.Base_BuildTest.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.TestManage.Base_BuildTest.CreatorId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.TestManage.Base_BuildTest.Deleted">
+            <summary>
+            否已删除
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.TestManage.Base_BuildTest.Column1">
+            <summary>
+            列1
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.TestManage.Base_BuildTest.Column2">
+            <summary>
+            列2
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.TestManage.Base_BuildTest.Column3">
+            <summary>
+            列3
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.TestManage.Base_BuildTest.Column4">
+            <summary>
+            列4
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Entity.TestManage.Base_BuildTest.Column5">
+            <summary>
+            列5
+            </summary>
+        </member>
+    </members>
+</doc>
